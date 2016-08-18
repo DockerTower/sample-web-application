@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+    application:
+        build: 
+            context: .
+            dockerfile: docker/nginx/Dockerfile
+        image: tower-simple-application:dev
+        environment:
+            - VIRTUAL_HOST="app.dev"
